@@ -3,7 +3,7 @@
 
 ## Release
 - 10 Stars for Release.
-- 20 stars for BIG Update. (double of the functions)
+- 25 stars for BIG Update. (double of the functions)
 ## Functions
 ```yaml
 - Token Formater
