@@ -1,0 +1,4 @@
+colorama
+concurrent.futures
+faker
+requests
