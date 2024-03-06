@@ -37,6 +37,8 @@
   - Token Pass Changer
   - Token Onliner
   - Token Status Rotater
+  - Get Own Token
+  - Token Login
 - Token Nuker:
   - Nuke Token
   - Leave Server
@@ -54,8 +56,6 @@
   - Nitro Gift Checker
 - Discord Nuker:
   - Nuke
-  - Get Own Token
-  - Token Login
 - Pc Cleaner:
   - Clean Fivem
   - Clean Recent
