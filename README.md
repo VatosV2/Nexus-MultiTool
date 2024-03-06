@@ -37,7 +37,7 @@
   - Token Pass Changer
   - Token Onliner
   - Token Status Rotater
-  - Get Own Token
+  - Get Own Token (Might Trigger Anit-Virus 🔴)
   - Token Login
 - Token Nuker:
   - Nuke Token
