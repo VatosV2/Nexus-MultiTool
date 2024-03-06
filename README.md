@@ -47,7 +47,7 @@
   - Mass dm
   - Close Dms
   - Block All Friends
-  - Fuckk account
+  - Fuck account
 - Token Editor:
   - Change Bio
   - Change Name
