@@ -39,6 +39,7 @@
   - Token Status Rotater
   - Get Own Token (Might Trigger Anit-Virus 🔴)
   - Token Login
+  - Nitro Gift Checker
 - Token Nuker:
   - Nuke Token
   - Leave Server
@@ -53,7 +54,6 @@
   - Change Name
   - Change Pronouns
   - Change Pfp
-  - Nitro Gift Checker
 - Discord Nuker:
   - Nuke
 - Pc Cleaner:
