@@ -1,0 +1,12 @@
+requests
+httpx
+tls_client
+websocket
+aiohttp
+asyncio
+pytz
+undetected_chromedriver
+faker
+colorama
+pycryptodome
+pathlib
