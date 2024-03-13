@@ -1,6 +1,7 @@
 # Please Star To support this project for free! ⭐
-## Screenshot
+## Screenshots
 ![ss](https://cdn.discordapp.com/attachments/1207062501577990154/1213239706515542136/20240301_223248.png?ex=65f4c086&is=65e24b86&hm=ed8f7e14dfd6e15016658a032bd0b6501f4e536526a21a27dea6aa5c06321e6e&)
+![ss](https://cdn.discordapp.com/attachments/1111293543634452510/1214685097949798490/imag2e.png?ex=65fa02a7&is=65e78da7&hm=da21bc3ed2a54ab41b709195cd3a2163966e952c3c1b3a0c36bbe640d0f5e74e&)
 ## Release
 - 10 Stars for Release. ⭐
 - 25 stars for BIG Update. (double of the functions) ⭐
@@ -17,6 +18,13 @@
   - Proxy Scraper
   - Proxy Checker
   - Obfusicator 
+  - Token Mail Verifier
+  - Token Pass Changer
+  - Token Onliner
+  - Token Status Rotater
+  - Get Own Token (Might Trigger Anit-Virus 🔴)
+  - Token Login
+  - Nitro Gift Checker
 - Webhook Tool:
   - Spam webhook
   - Delete webhook
@@ -29,17 +37,8 @@
   - Fake nitro gen
   - Fake ddos
   - Fake cc's
-```
-## Upcoming Functions:
-```yaml
-- Functions:
-  - Token Mail Verifier
-  - Token Pass Changer
-  - Token Onliner
-  - Token Status Rotater
-  - Get Own Token (Might Trigger Anit-Virus 🔴)
-  - Token Login
-  - Nitro Gift Checker
+  - Added Fake Wallet Miner
+  - Added Social Botter
 - Token Nuker:
   - Nuke Token
   - Leave Server
@@ -64,12 +63,8 @@
   - Clean Broswer Donwloads
   - Clean Desktop
   - Clean Downloads
-- Faker:
-  - Added Fake Wallet Miner
-  - Added Social Botter
 ```
-## Screenshot For v2
-![ss](https://cdn.discordapp.com/attachments/1111293543634452510/1214685097949798490/imag2e.png?ex=65fa02a7&is=65e78da7&hm=da21bc3ed2a54ab41b709195cd3a2163966e952c3c1b3a0c36bbe640d0f5e74e&)
+
 ## Donate
 ```py
 Btc: bc1q2e86tshk0cs05sty5ajlc6n6j8esutj2umcjtz
