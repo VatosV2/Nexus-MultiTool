@@ -5,6 +5,7 @@
 ## Release
 - 10 Stars for Release. ⭐
 - 25 stars for BIG Update. (double of the functions) ⭐
+- 40 Stars V3
 ## Functions
 ```yaml
 - Functions:
