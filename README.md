@@ -26,6 +26,18 @@
   - Get Own Token (Might Trigger Anit-Virus 🔴)
   - Token Login
   - Nitro Gift Checker
+  + Token Huminazor: (soon)
+  + Token Watermarker: (soon)
+  + Remove Discord Injection: (soon)
+  + Token Check Payments: (soon)
+  + Token Leave Group Chats: (soon)
+  + Scrape Avatars: (soon)
+  + Token Check Guild Count: (soon)
+  + Token Message everywhere: (soon)
+  + Gen Test Token: (soon)
+  + Token Info: (soon)
+  + Yotube Converter: (soon)
+  + Ip Lookup: (soon)
 - Webhook Tool:
   - Spam webhook
   - Delete webhook
