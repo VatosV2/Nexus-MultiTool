@@ -7,7 +7,7 @@
   <h3 align="center">[Nexus MultiTool] - discord.gg/nexustools</h3>
 
   <p align="center">
-    Nexus-MultiTool is a Multitool mostly centered around discord Tokens But also has Other Functions
+    Nexus-MultiTool is a Multitool mostly centered around discord Tokens But also has Other Features.
     <br/>
     <br/>
     <a href="https://discord.gg/nexustools">Discord</a>
