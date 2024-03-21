@@ -105,5 +105,3 @@ Btc: bc1q2e86tshk0cs05sty5ajlc6n6j8esutj2umcjtz
 Ltc: Lf5vGeL8BwNE84QGyAh1TJWuDxhyKS7QTD
 Eth: 0xa66343933221706294c29935FC8da88b025D501B
 ```
-
-## https://discord.gg/nexustools
