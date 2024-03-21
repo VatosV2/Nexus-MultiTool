@@ -11,3 +11,4 @@ colorama
 pycryptodome
 pathlib
 pywin32
+pytube
