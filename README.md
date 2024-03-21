@@ -18,10 +18,8 @@
 
 
 
-## Screenshots
+## Screenshot
 ![ss](https://cdn.discordapp.com/attachments/1207062501577990154/1213239706515542136/20240301_223248.png?ex=65f4c086&is=65e24b86&hm=ed8f7e14dfd6e15016658a032bd0b6501f4e536526a21a27dea6aa5c06321e6e&)
-![ss](https://cdn.discordapp.com/attachments/1111293543634452510/1214685097949798490/imag2e.png?ex=65fa02a7&is=65e78da7&hm=da21bc3ed2a54ab41b709195cd3a2163966e952c3c1b3a0c36bbe640d0f5e74e&)
-![ss](https://cdn.discordapp.com/attachments/1207062501577990154/1220375540725448724/Bild_2024-03-21_151246767.png?ex=660eb64a&is=65fc414a&hm=a6e76ce02b9fa3e434e578beb02e1daa7976f9250690f484820cc49b2152e0d2&)
 
 ## Releases
 - 10 Stars for Release ⭐ ✔
