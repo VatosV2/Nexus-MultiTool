@@ -19,7 +19,7 @@
 
 
 ## Screenshot
-![ss](https://cdn.discordapp.com/attachments/1207062501577990154/1213239706515542136/20240301_223248.png?ex=65f4c086&is=65e24b86&hm=ed8f7e14dfd6e15016658a032bd0b6501f4e536526a21a27dea6aa5c06321e6e&)
+![ss](https://cdn.discordapp.com/attachments/1207062501577990154/1213239706515542136/20240301_223248.png?ex=66107006&is=65fdfb06&hm=90ae9fe9fb3fcf837f2996478ae6aa797ede41de1d25ec40fc268df0cdc10192&)
 
 ## Releases
 - 10 Stars for Release ⭐ ✔
