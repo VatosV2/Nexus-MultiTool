@@ -98,8 +98,6 @@
   - Clean Downloads
 ```
 
-## Star History [![Star History Chart](https://api.star-history.com/svg?repos=VatosV2/Nexus-MultiTool&type=Date)](https://star-history.com/#VatosV2/Nexus-MultiTool&Date)
-
 ## Donate
 ```py
 Btc: bc1q2e86tshk0cs05sty5ajlc6n6j8esutj2umcjtz
