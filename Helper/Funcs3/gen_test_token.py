@@ -27,7 +27,7 @@ class DiscordAccountCreator:
     
     def create_account(self):
         try:
-            self.driver.get("https://discord.gg/MT2fKBEv")
+            self.driver.get("https://discord.com/invite/DFUAh7qcVZ")
             time.sleep(2)
 
             username = self.generate_username()
