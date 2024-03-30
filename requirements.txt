@@ -12,3 +12,4 @@ pycryptodome
 pathlib
 pywin32
 pytube
+bs4
