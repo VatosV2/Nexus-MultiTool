@@ -4,7 +4,6 @@ from Helper.Common.utils import *
 avatar_path = ""
 
 def update_bio(discord_token, new_bio,):
-    session = requests.Session()
     headerz = get_headers(discord_token)
     payload = {"bio": f"{new_bio}"}
     session = tls_client.Session(client_identifier="chrome_122", random_tls_extension_order=True)
