@@ -3,6 +3,7 @@ __author__ = 'Vatos'
 __copyright__ = 'discord.gg/nexustools'
 __version__ = '4.0.0'
 
+import re
 import os
 import time
 import threading
@@ -97,6 +98,7 @@ from .Funcs4.ip_grabber import make_ip_grabber
 from .Funcs4.message_logger import message_logger
 from .Funcs4.serial_checker import check_serials
 from .Funcs4.serial_changer import serial_changer
+
 banner = f'''{Fore.LIGHTMAGENTA_EX}
                     ███╗   ██╗███████╗██╗  ██╗██╗   ██╗███████╗   ████████╗ ██████╗  ██████╗ ██╗     ███████╗  
                     ████╗  ██║██╔════╝╚██╗██╔╝██║   ██║██╔════╝   ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝     
@@ -113,3 +115,10 @@ def donate_infos():
     print(f"{Fore.RESET}Eth: {Fore.GREEN}0xa66343933221706294c29935FC8da88b025D501B")
     input("Press Enter To continue...")
 
+os.system("title discord.gg/nexustools")
+response = requests.get('https://raw.githubusercontent.com/VatosV2/Nexus-MultiTool/main/Helper/__init__.py')
+version_match = re.search(r"__version__\s*=\s*[\'\"](.*?)[\'\"]", response.text)
+if version_match and __version__ == version_match.group(1):
+    pass
+else:
+    input(f"{Fore.RED} New Version Detected! https://github.com/VatosV2/Nexus-MultiTool")
