@@ -26,7 +26,7 @@ def change_theme():
     """)
     choice = input(f"{Fore.RESET}[{color}>{Fore.RESET}] Choice: ")
     colors = {
-        "1": color,
+        "1": Fore.LIGHTMAGENTA_EX,
         "2": Fore.LIGHTBLUE_EX,
         "3": Fore.LIGHTRED_EX,
         "4": Fore.LIGHTGREEN_EX,
