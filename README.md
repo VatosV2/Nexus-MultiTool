@@ -14,8 +14,7 @@
   </p>
 </p>
 <h3 align="center";">Please Star To support this project for free! ⭐</h3>
-
-
+<h3 align="center";">Linux Not supported at the moment! ❌</h3>
 
 
 ## Screenshot
