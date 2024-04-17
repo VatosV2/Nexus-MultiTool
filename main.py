@@ -141,5 +141,5 @@ def main2():
     main2()
 
 StartupTool()
-os.system("mode con cols=130 lines=24")
+os.system("mode con cols=135 lines=24")
 main()
