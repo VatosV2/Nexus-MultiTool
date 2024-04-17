@@ -1,7 +1,7 @@
 __title__ = 'Nexus'
 __author__ = 'Vatos'
 __copyright__ = 'discord.gg/nexustools'
-__version__ = '3.0.0'
+__version__ = '4.0.0'
 
 import os
 import time
