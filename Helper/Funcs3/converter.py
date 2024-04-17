@@ -18,6 +18,7 @@ def download_youtube(url, file_type):
         print(f"{lc} An error occurred: {str(e)}")
 
 def youtube_converter():
+    new_title("Youtube Converter discord.gg/nexustools")
     url = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Enter the YouTube URL: ")
     file_type = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Enter 'mp3' for audio or 'mp4' for video: ")
     download_youtube(url, file_type)

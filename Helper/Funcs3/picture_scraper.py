@@ -31,6 +31,7 @@ def download_images(url, folder_path):
             break
 
 def scrape_Avatars():
+    new_title("Picture scraper discord.gg/nexustools")
     count = 0
     folder_choice = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] 1 Preset Folder Or 2 Ouput/Avatars Folder? (1/2): ")
     if folder_choice == "1":

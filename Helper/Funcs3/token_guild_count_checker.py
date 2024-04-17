@@ -33,6 +33,7 @@ def count_guilds(token, printt):
 
 
 def guild_count():
+    new_title("Token Guild count checker discord.gg/nexustools")
     choice = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Hide Tokens? (y/n): ")
     if choice == "y":
         printt = "partial"

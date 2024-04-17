@@ -74,6 +74,7 @@ def process_gift_codes():
 
 
 def check_codes():
+    new_title("Nitro Gift Checker discord.gg/nexustools")
     hidden_valids_ask = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Hide Valids?(y/n): ")
     if hidden_valids_ask == "y":
         hidden_valids == True

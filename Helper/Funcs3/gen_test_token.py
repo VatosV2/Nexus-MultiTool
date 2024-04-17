@@ -35,9 +35,9 @@ class DiscordAccountCreator:
             print(f"{lc} Inputing username: {username}")
             displayname_field.send_keys(username)
 
-            continue_button = self.driver.find_element('css selector', 'button.button__47891')
+            continue_button = self.driver.find_element('css selector', 'button.button__5573c')
 
-            checkbox = self.driver.find_element('css selector', 'input.inputDefault__7fb3f')
+            checkbox = self.driver.find_element('css selector', 'input.input__52838')
             checkbox.click()
             print(f"{lc} Clicked Checkbox")
 
@@ -68,6 +68,17 @@ class DiscordAccountCreator:
             print("Error creating account:", e)
 
 
+def gen_test_token():
+        new_title("Gen Test Token discord.gg/nexustools")
+        print(f"{Fore.RED} ONLY GEN ONE OR IT WILL GET LOCKED!")
+        print(f"{Fore.RED} DISCORD CANT BE RUNNING IN BACKROUND CLOSE IT!!")
+        close_discord = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Did U close discord? (y/n): ")
+        if close_discord == "y":
+            gen_token()
+        else:
+            pass
+
 def gen_token():
     account_creator = DiscordAccountCreator()
     account_creator.create_account()
+    input("faf")

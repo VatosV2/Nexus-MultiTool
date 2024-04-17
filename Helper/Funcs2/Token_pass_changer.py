@@ -53,7 +53,7 @@ def change_pass():
 
 
 def pass_changer():
-    new_title("Nexus Token Pass Changer")
+    new_title("Token Pass Changer discord.gg/nexustools")
     proxies = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Use Proxies? (y/n): ")
     if proxies == "y":
         print(f"{lc} {Fore.GREEN}Using Proxies!{Fore.RESET}")

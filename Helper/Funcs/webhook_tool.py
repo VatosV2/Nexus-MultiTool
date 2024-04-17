@@ -15,7 +15,7 @@ def check_webhook():
     Webhook_tool()
 
 
-def send_discord_message(webhook_url, message):
+def send_discord_message(webhook_url, message, frequency=0.1):
     payload = {
         "content": message
     }
@@ -26,6 +26,7 @@ def send_discord_message(webhook_url, message):
         print(f"{lc} {Fore.BLUE}Webhook={Fore.WHITE}{webhook_url[:80]}...{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}[{Fore.GREEN}Message Send{Style.BRIGHT}{Fore.LIGHTBLACK_EX}]{Fore.RESET}")
     else:
         print(f"{lc} {Fore.BLUE}Webhook={Fore.WHITE}{webhook_url[:80]}...{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}[{Fore.RED}FAILED: {response.status_code}{Style.BRIGHT}{Fore.LIGHTBLACK_EX}]{Fore.RESET}")
+    time.sleep(frequency)
 
 def webhook_spammer():
     clear()
@@ -49,8 +50,7 @@ def webhook_spammer():
         frequency = 0.01
 
     while True:
-        send_discord_message(webhook_url, message)
-        time.sleep(frequency)
+        send_discord_message(webhook_url, message, frequency)
 
 def delete_webhook():
     clear()
@@ -73,16 +73,40 @@ def send_message():
     send_discord_message(webhook_url, message)
     input("Press Enter To continue...")
     Webhook_tool()
+
+def webhook_spammer_multiple():
+    print("Choose Webhook file in window.")
+    webhook_file = filedialog.askopenfilename(filetypes=[("Text files", "*.txt")])
+    print(f"Webhook file: {webhook_file}")
+    message = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Message: ")
+    while True:
+        with open(webhook_file, 'r') as file:
+            webhook_urls = file.readlines()
+
+        message_to_send = message
+
+        threads = []
+
+        for url in webhook_urls:
+            frequency = 1
+            url = url.strip() 
+            thread = threading.Thread(target=send_discord_message, args=(url, message_to_send, frequency))
+            threads.append(thread)
+            thread.start()
+            
+        for thread in threads:
+            thread.join()
                
 def Webhook_tool():
-    new_title("Nexus Webhook Tool")
+    new_title("Webhook Tool discord.gg/nexustools")
     clear()
     print(banner)
     print("                                             ", f"{Fore.LIGHTMAGENTA_EX}<<{Fore.RESET}1{Fore.LIGHTMAGENTA_EX}>> [{Fore.RESET}Webhook Spammer{Fore.LIGHTMAGENTA_EX}]")
     print("                                             ", f"{Fore.LIGHTMAGENTA_EX}<<{Fore.RESET}2{Fore.LIGHTMAGENTA_EX}>> [{Fore.RESET}Webhook Deleter{Fore.LIGHTMAGENTA_EX}]")
     print("                                             ", f"{Fore.LIGHTMAGENTA_EX}<<{Fore.RESET}3{Fore.LIGHTMAGENTA_EX}>> [{Fore.RESET}Webhook Send Message{Fore.LIGHTMAGENTA_EX}]")
     print("                                             ", f"{Fore.LIGHTMAGENTA_EX}<<{Fore.RESET}4{Fore.LIGHTMAGENTA_EX}>> [{Fore.RESET}Check Webhook{Fore.LIGHTMAGENTA_EX}]")
-    print("                                             ", f"{Fore.LIGHTMAGENTA_EX}<<{Fore.RESET}5{Fore.LIGHTMAGENTA_EX}>> [{Fore.RESET}Exit{Fore.LIGHTMAGENTA_EX}]")
+    print("                                             ", f"{Fore.LIGHTMAGENTA_EX}<<{Fore.RESET}5{Fore.LIGHTMAGENTA_EX}>> [{Fore.RESET}Send With Multiple Webhooks{Fore.LIGHTMAGENTA_EX}]")
+    print("                                             ", f"{Fore.LIGHTMAGENTA_EX}<<{Fore.RESET}0{Fore.LIGHTMAGENTA_EX}>> [{Fore.RESET}Exit{Fore.LIGHTMAGENTA_EX}]")
     choice = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Choice: ")
     if choice == "1":
         webhook_spammer()
@@ -93,6 +117,8 @@ def Webhook_tool():
     if choice == "4":
         check_webhook()
     if choice == "5":
+        webhook_spammer_multiple()
+    if choice == "0":
         quit1()
     else:
         print("Invalid")

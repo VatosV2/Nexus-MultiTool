@@ -4,6 +4,7 @@ from Helper.Common.utils import *
 
 
 def formater():
+    new_title("Token Formater discord.gg/nexustools")
     count = 0
     tokens = get_tokens()
     new_title("Nexus Token Formater")

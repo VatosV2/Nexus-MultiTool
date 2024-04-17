@@ -78,6 +78,7 @@ def process_tokens(target, arg1):
         thread.join()
 
 def token_wartermarker():
+    new_title("Token Wartermarker discord.gg/nexustools")
     Wartermark = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Invite Code: ")
     if ".gg/" in Wartermark:
         Wartermark = str(Wartermark).split(".gg/")[1]

@@ -1,19 +1,23 @@
 from Helper import *
 from Helper.Common.utils import *
 
+session = tls_client.Session(client_identifier="chrome_122", random_tls_extension_order=True)
+session.keep_alive = True
+
+
 def leave_all_group_chats(token):
     headers = {
         'Authorization': token
     }
     
-    response = requests.get('https://discord.com/api/v9/users/@me/channels', headers=headers)
+    response = session.get('https://discord.com/api/v9/users/@me/channels', headers=headers)
     
     if response.status_code == 200:
         channels = response.json()
         for channel in channels:
             if channel['type'] == 3:  
                 channel_id = channel['id']
-                response = requests.delete(f'https://discord.com/api/v9/channels/{channel_id}', headers=headers)
+                response = session.delete(f'https://discord.com/api/v9/channels/{channel_id}', headers=headers)
                 if response.status_code == 200:
                     print(f'{lc} {Fore.BLUE}token={Fore.WHITE}{token[:20]}...{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}[{Fore.GREEN}LEFT{Style.BRIGHT}{Fore.LIGHTBLACK_EX}]{Fore.RESET}')
                 else:
@@ -23,6 +27,7 @@ def leave_all_group_chats(token):
 
 
 def leave_groups():
+    new_title("Token Leave groups discord.gg/nexustools")
     tokens = get_tokens()
     tokens = [token.strip() for token in tokens]
     threads = []

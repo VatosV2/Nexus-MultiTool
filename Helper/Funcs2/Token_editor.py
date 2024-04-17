@@ -4,13 +4,24 @@ from Helper.Common.utils import *
 avatar_path = ""
 
 def update_bio(discord_token, new_bio,):
-    headerz = get_headers(discord_token)
+    headers = get_headers(discord_token)
     payload = {"bio": f"{new_bio}"}
     session = tls_client.Session(client_identifier="chrome_122", random_tls_extension_order=True)
 
-    r = session.patch("https://discord.com/api/v9/users/@me", json=payload, headers=headerz)
+    r = session.patch("https://discord.com/api/v9/users/@me", json=payload, headers=headers)
     if r.status_code == 200:
         print(f"{lc} {Fore.BLUE}token={Fore.WHITE}{discord_token[:20]}...{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}[{Fore.GREEN}BIO CHANGED{Style.BRIGHT}{Fore.LIGHTBLACK_EX}]{Fore.RESET}")
+    else:
+        print(f"{lc} {Fore.BLUE}token={Fore.WHITE}{discord_token[:20]}...{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}[{Fore.GREEN}ERROR{Style.BRIGHT}{Fore.LIGHTBLACK_EX}]{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}({Fore.LIGHTBLACK_EX}{r.status_code}{Style.BRIGHT}{Fore.LIGHTBLACK_EX}){Fore.RESET}")
+
+
+def Change_lang(discord_token, lang):
+    payload = {"locale": lang}
+    headers = get_headers(discord_token)
+    session = tls_client.Session(client_identifier="chrome_122", random_tls_extension_order=True)
+    r = session.patch("https://discord.com/api/v9/users/@me/settings", json=payload, headers=headers)
+    if r.status_code == 200:
+        print(f"{lc} {Fore.BLUE}token={Fore.WHITE}{discord_token[:20]}...{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}[{Fore.GREEN}LANGUAGE CHANGED{Style.BRIGHT}{Fore.LIGHTBLACK_EX}]{Fore.RESET}")
     else:
         print(f"{lc} {Fore.BLUE}token={Fore.WHITE}{discord_token[:20]}...{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}[{Fore.GREEN}ERROR{Style.BRIGHT}{Fore.LIGHTBLACK_EX}]{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}({Fore.LIGHTBLACK_EX}{r.status_code}{Style.BRIGHT}{Fore.LIGHTBLACK_EX}){Fore.RESET}")
 
@@ -31,11 +42,11 @@ def pronoun_changer(token, nouns):
     headerz = get_headers(token)
     payload = {"pronouns":  nouns}
     session = tls_client.Session(client_identifier="chrome_122", random_tls_extension_order=True)
-    response = session.patch("https://discord.com/api/v9/users/@me/profile", json=payload, headers=headerz)
-    if response.status_code == 200:
+    r = session.patch("https://discord.com/api/v9/users/@me/profile", json=payload, headers=headerz)
+    if r.status_code == 200:
         print(f"{lc} {Fore.BLUE}token={Fore.WHITE}{token[:20]}...{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}[{Fore.GREEN}PRONOUN CHANGED{Style.BRIGHT}{Fore.LIGHTBLACK_EX}]{Fore.RESET}")
     else:
-        print(f"{lc} {Fore.BLUE}token={Fore.WHITE}{token[:20]}...{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}[{Fore.GREEN}ERROR{Style.BRIGHT}{Fore.LIGHTBLACK_EX}]{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}({Fore.LIGHTBLACK_EX}{response.status_code}{Style.BRIGHT}{Fore.LIGHTBLACK_EX}){Fore.RESET}")
+        print(f"{lc} {Fore.BLUE}token={Fore.WHITE}{token[:20]}...{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}[{Fore.GREEN}ERROR{Style.BRIGHT}{Fore.LIGHTBLACK_EX}]{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}({Fore.LIGHTBLACK_EX}{r.status_code}{Style.BRIGHT}{Fore.LIGHTBLACK_EX}){Fore.RESET}")
 
 def get_avatar(path):
     path2 = os.getcwd()
@@ -78,7 +89,7 @@ def process_tokens(target, arg1):
     token_editor()
 
 def token_editor():
-    new_title("Nexus Token Editor")
+    new_title("Token Editor discord.gg/nexustools")
     
     clear()
     print(banner)
@@ -86,6 +97,7 @@ def token_editor():
     print(f"[{Fore.MAGENTA}2{Fore.RESET}] Change Name")
     print(f"[{Fore.MAGENTA}3{Fore.RESET}] Change Pronouns")
     print(f"[{Fore.MAGENTA}4{Fore.RESET}] Change PFP")
+    print(f"[{Fore.MAGENTA}5{Fore.RESET}] Change language")
     print(f"[{Fore.MAGENTA}0{Fore.RESET}] Leave")
     choice = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Choice: ")
     if choice == "1":
@@ -112,6 +124,29 @@ def token_editor():
         else:
             avatar_path = os.path.join('Data', "Avatars")
         process_tokens(change_avatar, avatar_path)
+    elif choice == "5":
+        print(banner)
+        clear()
+        print(f"""
+{Fore.BLUE}Language codes:{Fore.RESET}
+              
+{Fore.CYAN}United Kingdom{Fore.RESET} -> {Fore.GREEN}en-GB{Fore.RESET}
+{Fore.CYAN}France{Fore.RESET} -> {Fore.GREEN}fr{Fore.RESET}
+{Fore.CYAN}Germany{Fore.RESET} -> {Fore.GREEN}de{Fore.RESET}
+{Fore.CYAN}Italy{Fore.RESET} -> {Fore.GREEN}it{Fore.RESET}
+{Fore.CYAN}Netherlands{Fore.RESET} -> {Fore.GREEN}nl{Fore.RESET}
+{Fore.CYAN}Brazil{Fore.RESET} -> {Fore.GREEN}pt-BR{Fore.RESET}
+{Fore.CYAN}Russia{Fore.RESET} -> {Fore.GREEN}ru{Fore.RESET}
+{Fore.CYAN}Japan{Fore.RESET} -> {Fore.GREEN}ja{Fore.RESET}
+{Fore.CYAN}South Korea{Fore.RESET} -> {Fore.GREEN}ko{Fore.RESET}
+{Fore.CYAN}China (Simplified){Fore.RESET} -> {Fore.GREEN}zh-CN{Fore.RESET}
+{Fore.CYAN}China (Traditional){Fore.RESET} -> {Fore.GREEN}zh-TW{Fore.RESET}
+{Fore.CYAN}Turkey{Fore.RESET} -> {Fore.GREEN}tr{Fore.RESET}
+{Fore.CYAN}Denmark{Fore.RESET} -> {Fore.GREEN}da{Fore.RESET}
+{Fore.CYAN}Finland{Fore.RESET} -> {Fore.GREEN}fi{Fore.RESET}
+        """)    
+        lang = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Language code:")
+        process_tokens(Change_lang, lang)
         
     elif choice == "0":
         quit1()

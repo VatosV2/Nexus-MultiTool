@@ -5,7 +5,6 @@ __version__ = '3.0.0'
 
 import os
 import time
-import undetected_chromedriver as uc
 import threading
 import requests
 import concurrent.futures
@@ -28,7 +27,12 @@ import pytz
 import shutil
 import tempfile
 import subprocess
+import http
 
+import undetected_chromedriver as uc
+import tkinter as tk
+
+from tkinter import filedialog
 from faker import Faker
 from concurrent.futures import ThreadPoolExecutor
 from colorama import Fore, Style
@@ -60,7 +64,7 @@ from .Funcs.obf import obfuscate
 from .Funcs.webhook_tool import Webhook_tool
 from .Funcs.faker import main_faker
 from .Funcs.start import StartupTool
-from .Funcs.clear_output import clear_output
+from .Funcs.clear import clear_output, clear_input
 
 from .Funcs2.Token_Mail_verifier import TokenMailverifier
 from .Funcs2.Token_pass_changer import pass_changer
@@ -88,12 +92,17 @@ from .Funcs3.converter import youtube_converter
 from .Funcs3.social_menu import social_menu
 from .Funcs3.ip_lookup import ip_lookup
 
+from .Funcs4.id_to_tokend import id__token
+from .Funcs4.ip_grabber import make_ip_grabber
+from .Funcs4.message_logger import message_logger
+from .Funcs4.serial_checker import check_serials
+from .Funcs4.serial_changer import serial_changer
 banner = f'''{Fore.LIGHTMAGENTA_EX}
-                    ███╗   ██╗███████╗██╗  ██╗██╗   ██╗███████╗   ████████╗ ██████╗  ██████╗ ██╗     ███████╗
-                    ████╗  ██║██╔════╝╚██╗██╔╝██║   ██║██╔════╝   ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝
-                    ██╔██╗ ██║█████╗   ╚███╔╝ ██║   ██║███████╗█████╗██║   ██║   ██║██║   ██║██║     ███████╗
-                    ██║╚██╗██║██╔══╝   ██╔██╗ ██║   ██║╚════██║╚════╝██║   ██║   ██║██║   ██║██║     ╚════██║
-                    ██║ ╚████║███████╗██╔╝ ██╗╚██████╔╝███████║      ██║   ╚██████╔╝╚██████╔╝███████╗███████║
+                    ███╗   ██╗███████╗██╗  ██╗██╗   ██╗███████╗   ████████╗ ██████╗  ██████╗ ██╗     ███████╗  
+                    ████╗  ██║██╔════╝╚██╗██╔╝██║   ██║██╔════╝   ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝     
+                    ██╔██╗ ██║█████╗   ╚███╔╝ ██║   ██║███████╗█████╗██║   ██║   ██║██║   ██║██║     ███████╗       
+                    ██║╚██╗██║██╔══╝   ██╔██╗ ██║   ██║╚════██║╚════╝██║   ██║   ██║██║   ██║██║     ╚════██║      
+                    ██║ ╚████║███████╗██╔╝ ██╗╚██████╔╝███████║      ██║   ╚██████╔╝╚██████╔╝███████╗███████║   
                     ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝      ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝
                                                 discord.gg/nexus-tools
     '''

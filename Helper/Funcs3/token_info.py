@@ -2,7 +2,9 @@ from Helper import *
 from Helper.Common.utils import *
 
 
-def fetch_user_details(token):
+def fetch_user_details():
+    new_title("Token info discord.gg/nexustools")
+    token = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Token: ")
     headers = {
         'Authorization': token
     }

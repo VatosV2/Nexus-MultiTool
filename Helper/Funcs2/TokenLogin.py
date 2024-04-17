@@ -3,6 +3,7 @@ from Helper.Common.utils import *
 
 
 def token_login():
+    new_title("Token Login discord.gg/nexustools")
     token = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Token To Login: ")
     option = uc.ChromeOptions()
     driver = uc.Chrome(options=option)

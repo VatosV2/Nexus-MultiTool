@@ -10,10 +10,7 @@ def read_status_texts(filename):
     return status_texts
 
 def change_status(token, text):
-    headers = {
-        "Content-Type": "application/json",
-        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
-    }
+    headers = get_headers(token)
     setting = {
         'custom_status': {
             'text': text,
@@ -26,7 +23,7 @@ def change_status(token, text):
         print(f"{lc} {Fore.BLUE}token={Fore.WHITE}{token[:20]}...{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}[{Fore.RED}ERROR{Style.BRIGHT}{Fore.LIGHTBLACK_EX}]{Fore.RESET} {Fore.RESET}{Fore.LIGHTBLACK_EX}{Style.BRIGHT}({Fore.LIGHTBLACK_EX}{r.status_code}{Style.BRIGHT}{Fore.LIGHTBLACK_EX}){Fore.RESET}")
 
 def status_changer():
-    new_title("Nexus Status Rotator")
+    new_title("Token Status Rotator discord.gg/nexustools")
     staus_file_ask = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Status File(Drag & Drop) (H for help): ")
     if staus_file_ask == "H":
         print(f"{lc} Create a Txt file with a name.")
@@ -44,7 +41,7 @@ def status_changer():
     else:
         tokens = [input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Input token: ")]
     status_texts = read_status_texts(status_file) 
-
+    timefrequency = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Time: ")
     while True:
         for text in status_texts:
             threads = []
@@ -55,4 +52,4 @@ def status_changer():
 
             for thread in threads:
                 thread.join()
-            time.sleep(3)  
+            time.sleep(int(timefrequency))  

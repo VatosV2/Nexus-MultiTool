@@ -11,3 +11,6 @@ from Helper.Plugs.FakerPlugs.Funcs.tokengen import *
 from Helper.Plugs.FakerPlugs.Funcs.cc import *
 from Helper.Plugs.FakerPlugs.Funcs.wallet_finder import *
 from Helper.Plugs.FakerPlugs.Funcs.social_botter import *
+from Helper.Plugs.FakerPlugs.Funcs.paypal_otp import *
+from Helper.Plugs.FakerPlugs.Funcs.account_gen import *
+from Helper.Plugs.FakerPlugs.Funcs.fortnite_checker import *

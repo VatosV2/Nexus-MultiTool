@@ -3,7 +3,7 @@ from Helper.Common.utils import *
 from Helper.Plugs.TokenNukerPlugs import *
 
 def Token_nuker():
-    new_title("Nexus Token Nuker")
+    new_title("Token Nuker discord.gg/nexustools")
     clear()
     print(banner)
     print(f"{Fore.RESET}[{Fore.MAGENTA}1{Fore.RESET}] Nuke Token")

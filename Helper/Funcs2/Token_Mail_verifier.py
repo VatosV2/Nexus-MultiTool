@@ -11,7 +11,7 @@ except Exception as e:
 config = load_config()
 domains = ["outlook.com", "hotmail.com"]
 _Api_keys = config['Api_keys']
-api_key = _Api_keys['kopcheeka_api_key']
+api_key = _Api_keys['mail_verifier_api']
 
 claimed_count = 0  
 verified_count = 0 
@@ -276,11 +276,12 @@ def main():
 
 def update_console_title():
     while True:
-        resp = httpx.get(f"http://api.kopeechka.store/user-balance?token={_Api_keys['kopcheeka_api_key']}&api=2.0")
+        resp = httpx.get(f"http://api.kopeechka.store/user-balance?token={_Api_keys['mail_verifier_api']}&api=2.0")
         balance = resp.json()['balance']
         title = f"Nexus Mail Verifier Claims: {claimed_count} | Verifies: {verified_count} | Errors: {error_count} | Balance: {balance} RUB"
 
 def TokenMailverifier():
+    new_title("Mail Verifier discord.gg/nexustools")
     os.system("cls")
     print(Fore.LIGHTMAGENTA_EX + '''
                     ███╗   ██╗███████╗██╗  ██╗██╗   ██╗███████╗   ████████╗ ██████╗  ██████╗ ██╗     ███████╗
@@ -304,9 +305,9 @@ def TokenMailverifier():
     else:
         print(f"{lc} {Fore.RED}Not Using Proxies{Fore.RESET}")
         use_proxies = False
-    if not _Api_keys['kopcheeka_api_key']:
+    if not _Api_keys['mail_verifier_api']:
         print(f'{ld} Input your kopeechka API key in the config.')
-    resp = httpx.get(f"http://api.kopeechka.store/user-balance?token={_Api_keys['kopcheeka_api_key']}&api=2.0")
+    resp = httpx.get(f"http://api.kopeechka.store/user-balance?token={_Api_keys['mail_verifier_api']}&api=2.0")
     if 'OK' not in resp.text:
         print(f'{ld} Error getting kopeechka balance: ' + resp.json()['value'])
         time.sleep(3)

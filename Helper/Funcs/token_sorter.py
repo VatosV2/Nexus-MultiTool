@@ -76,7 +76,7 @@ def results():
     input("Press Enter To continue...")
 
 def sort_tokens():
-    new_title("Nexus Token Sorter")
+    new_title("Token Sorter discord.gg/nexustools")
     choice = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Use Token or Valid Token file? (V/T) ")
     if choice == "T":
         tokens = get_tokens()

@@ -164,7 +164,7 @@ def online(token, game, type, status):
 
 
 def online_tokens():
-    new_title("Nexus Token Onliner")
+    new_title("Token Onliner discord.gg/nexustools")
     threads = []
     tokens = get_tokens()
     tokens = [token.strip() for token in tokens]

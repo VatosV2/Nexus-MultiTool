@@ -27,6 +27,7 @@ def check_token_gid(token, guild_id):
         print(f'{lc} {Fore.BLUE}token={Fore.WHITE}{token[:20]}...{Fore.RESET} Is Invalid or couldn\'t be checked')
 
 def check_tokens_guild():
+    new_title("Token Guild Checker discord.gg/nexustools")
     global in_guild, not_guild, invalid
     new_title("Nexus Token Guild Checker")
     tokens = get_tokens()

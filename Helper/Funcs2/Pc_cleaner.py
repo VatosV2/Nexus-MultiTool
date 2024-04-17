@@ -109,6 +109,7 @@ def organize(folder_path):
     Cleaner()
 
 def Cleaner():
+    new_title("Pc Cleaner discord.gg/nexustools")
     clear()
     print(banner)
     print(f"{Fore.RESET}[{Fore.MAGENTA}1{Fore.RESET}] Clean Temp")

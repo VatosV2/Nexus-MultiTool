@@ -10,6 +10,14 @@ index_file = "index.js"
 replace_js = "module.exports = require('./core.asar');"
 check_process = subprocess.check_output(["tasklist"]).decode("unicode_escape")
 
+def Remove_Injection():
+    new_title("Discord injection remover discord.gg/nexustools")
+    print(f"{Fore.RED} CAN BREAK UR DISCORD!!")
+    choice1 = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Do u want to go back? (y/n): ")
+    if choice1 == "y":
+        pass
+    else:
+        RemoveInjection()
 def RemoveInjection():
     global path
     global discord_folder

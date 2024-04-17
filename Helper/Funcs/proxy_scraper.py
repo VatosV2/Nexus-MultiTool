@@ -30,7 +30,7 @@ def get_proxys(typ, timeout):
     input("Press Enter To continue...")
 
 def Proxy_scraper():
-    new_title("Neuxs Proxy Scraper")
+    new_title("Proxy Scraper discord.gg/nexustools")
     choice = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Enter Type: (http / socks4 / socks5): ")
     if choice == 'http':
         typ = choice

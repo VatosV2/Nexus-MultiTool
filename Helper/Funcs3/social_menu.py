@@ -10,8 +10,6 @@ def link_start(link):
 
 def social_menu():
     new_title("Nexus Socials")
-    clear()
-    print(banner)
     print(f"{Fore.RESET}[{Fore.MAGENTA}1{Fore.RESET}] Nexus Discord")
     print(f"[{Fore.MAGENTA}2{Fore.RESET}] Vatos Github")
     print(f"[{Fore.MAGENTA}3{Fore.RESET}] MultiTool Github")

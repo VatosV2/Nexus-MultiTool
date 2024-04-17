@@ -29,7 +29,7 @@ dirs = [
 
 
 def StartupTool():
-    new_title("Nexus Multitool Startup")
+    new_title("Nexus Startup discord.gg/nexustools")
     if os.path.exists(f"Output"):
         pass
     else:

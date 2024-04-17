@@ -10,6 +10,6 @@ faker
 colorama
 pycryptodome
 pathlib
-pywin32
 pytube
-bs4
+pywin32
+websocket-client

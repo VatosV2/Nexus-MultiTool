@@ -34,14 +34,19 @@ def check_proxy(proxy):
             file.write(f"{proxy} \n")
 
 def check_proxies_from_file():
-    with open("Input/proxies.txt", 'r') as file:
+    choice = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Use Input/proxies.txt?: (y/n) ")
+    if choice == "y":
+        file_to_check = "Input/proxies.txt"
+    else:
+        file_to_check = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Drag and drop proxie file to check: ")
+    with open(file_to_check, 'r') as file:
         proxyList = file.read().splitlines()
     
     with ThreadPoolExecutor(max_workers=10) as executor:  
         executor.map(check_proxy, proxyList)
 
 def check_proxys():
-    new_title("Nexus Proxy Checker")
+    new_title("Proxy Checker discord.gg/nexustools")
     with open("Output/Proxys/working_proxies.txt", 'w', encoding="utf-8") as file:
         file.close()
     check_proxies_from_file()

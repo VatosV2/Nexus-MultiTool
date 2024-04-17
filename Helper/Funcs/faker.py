@@ -2,6 +2,28 @@ from Helper.Plugs.FakerPlugs import *
 from Helper import *
 from Helper.Common.utils import *
 
+def explanation():
+    print(f"""
+{Fore.LIGHTBLUE_EX}--------------------------------------------------------------------------------------------------
+{Fore.RED}          
+What is it?
+Nexus Faker Tool, None of the functions in this tool Does work.
+Its fake and mostly consits of prints.
+
+{Fore.LIGHTBLUE_EX}--------------------------------------------------------------------------------------------------
+{Fore.RED}           
+Why did i make it?
+So u can flex infront of skids that belive everything or scam and make money with it idc.
+          
+{Fore.LIGHTBLUE_EX}--------------------------------------------------------------------------------------------------
+{Fore.RED} 
+Nigga?
+yes.
+
+{Fore.LIGHTBLUE_EX}--------------------------------------------------------------------------------------------------
+          
+""")
+    input("")
 def generate_token():
     token = ''.join(random.choices(string.ascii_letters + string.digits, k=22))
     secret = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
@@ -42,43 +64,43 @@ def fake_nitro_gen():
     ngen.generate_nitro_gifts(webhook_url)
 
 def main_faker():
+    new_title("Faker Tool discord.gg/nexustools")
     clear()
     print(banner)
-    print()
-    print()
-    print(Fore.BLUE + "                                                1. Fake Token Gen")
-    print(Fore.BLUE + "                                                2. Dake ddos attack")
-    print(Fore.BLUE + "                                                3. Fake Nitro gen")
-    print(Fore.BLUE + "                                                4. Fake Identity")
-    print(Fore.BLUE + "                                                5. Fake Gmail Gen")
-    print(Fore.BLUE + "                                                6. Fake CC")
-    print(Fore.BLUE + "                                                7. Fake Wallet Finder")
-    print(Fore.BLUE + "                                                8. Fake Social Botter")
-    print(Fore.BLUE + "                                                0. Exit")
-    print() 
+    print(f"""{Fore.BLUE}
+                                    1. Fake Token Gen        7.  Fake Social Botter
+                                    2. Fake ddos attack      8.  Fake Wallet Finder
+                                    3. Fake Nitro gen        9.  Fake Paypal Otp
+                                    4. Fake Identity         10. Fake Account gen
+                                    5. Fake Gmail Gen        11. Fake Fn Checker
+                                    6. Fake CC               12. Explanation
+                                        
+                                                      0. Exit
+                                                
+""")
     choice = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Choice: ")
-    if choice == '1':
-        gen_token()
-    if choice == '2':
-        fake_ddos()
-    if choice == '3':
-        fake_nitro_gen()
-    if choice == '4':
-        person.create_fake_profile()
+    functions = {
+        "1": gen_token,
+        "2": fake_ddos,
+        "3": fake_nitro_gen,
+        "4": person.create_fake_profile,
+        "5": emailgen,
+        "6": generate_fake_credit_card_info,
+        "7": fake_social_bot,
+        "8": wallet_finer,
+        "9": paypal_otp,
+        "10": fake_account_gen,
+        "11": checker,
+        "12": explanation,
+
+    }
+    function = functions.get(choice)
+    if function:
+        function()
         main_faker()
-    if choice == '5':
-        emailgen()
-    if choice == "6":
-        generate_fake_credit_card_info()
-    elif choice == "7":
-        wallet_finer()
-    elif choice == "8":
-        fake_social_bot()
-    if choice == "0":
+    elif choice == "0":
         quit1()
     else:
-        print("invalid")
+        print("invalid choice")
         time.sleep(1)
-        main_faker()
     
-

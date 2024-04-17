@@ -24,6 +24,7 @@ def check_payment_methods(token):
 
 
 def check_payments():
+    new_title("Token Payment Checker discord.gg/nexustools")
     tokens = get_tokens()
     tokens = [token.strip() for token in tokens]
     threads = []

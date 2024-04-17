@@ -59,6 +59,12 @@
   - Token Info
   - Yotube Converter
   - Ip Lookup
+  + Id To token
+  + Ip grabber
+  + Discord Message Logger
+  + Serial Checker
+  + Serial Changer
+  + Theme Changer
 - Webhook Tool:
   - Spam webhook
   - Delete webhook
@@ -71,8 +77,12 @@
   - Fake nitro gen
   - Fake ddos
   - Fake cc's
-  - Added Fake Wallet Miner
-  - Added Social Botter
+  - Fake Wallet Miner
+  - Social Botter
+  + Added Fake Paypal Otp
+  + Added Fake Account gen
+  + Added Fake Fn Checker
+  + Added Explination
 - Token Nuker:
   - Nuke Token
   - Leave Server
@@ -98,7 +108,31 @@
   - Clean Desktop
   - Clean Downloads
 ```
-
+## Change Logs
+```yaml
+- Changes:
+  - Update Gui
+  - Added Mapping Dict
+  - Changed Printing
+  - Updted Token Spammer
+  - Added 'Send With Multiple Webhooks' to Webhook Tool
+  - Updated Gen-Test-Token
+  - Updated Status Rotator
+  - Updated Leave Groups
+  - Updated Token Checker
+- Faker:
+    - Added Fake Paypal Otp
+    - Added Fake Account gen
+    - Added Fake Fn Checker
+    - Added Explination
+- Added Funcs:
+  + Id To token
+  + Ip grabber
+  + Discord Message Logger
+  + Serial Checker
+  + Serial Changer
+  + Theme Changer
+```
 ## Donate
 ```py
 Btc: bc1q2e86tshk0cs05sty5ajlc6n6j8esutj2umcjtz

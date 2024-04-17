@@ -47,6 +47,7 @@ async def send_messages_to_channels(token, message):
 
 
 def meessage_everywhere_spam():
+    new_title("Discord Message Everywhere discord.gg/nexustools")
     token = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Token: ")
     message = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Message: ")
     asyncio.run(send_messages_to_channels(token, message))

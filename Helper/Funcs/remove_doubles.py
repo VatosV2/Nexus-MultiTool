@@ -27,7 +27,7 @@ def remove(input_file, output_file):
         remove_duplicates()
 
 def remove_duplicates():
-    new_title("Nexus Double Remover")
+    new_title("Remove Doubles discord.gg/nexustools")
     choice = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Use Double Remover on tokens.txt? (y/n) ")
     if choice == "y":
         choice2 = input(f"{Fore.RESET}[{Fore.LIGHTMAGENTA_EX}>{Fore.RESET}] Rewrite Tokens.txt? (y/n) ")

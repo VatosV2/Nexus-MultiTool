@@ -86,6 +86,7 @@ def hm(token):
     Change_name(token)
           
 def procces_hm():
+    new_title("Token Huminazor discord.gg/nexustools")
     tokens = get_tokens()
     tokens = [token.strip() for token in tokens]
     for token in tokens:
