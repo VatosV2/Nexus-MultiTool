@@ -120,10 +120,10 @@
   - Updated Leave Groups
   - Updated Token Checker
 - Faker:
-    - Added Fake Paypal Otp
-    - Added Fake Account gen
-    - Added Fake Fn Checker
-    - Added Explination
+  - Added Fake Paypal Otp
+  - Added Fake Account gen
+  - Added Fake Fn Checker
+  - Added Explination
 - Added Funcs:
   + Id To token
   + Ip grabber
