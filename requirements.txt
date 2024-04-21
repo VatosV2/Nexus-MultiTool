@@ -13,3 +13,4 @@ pathlib
 pytube
 pywin32
 websocket-client
+bs4
