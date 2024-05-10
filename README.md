@@ -107,7 +107,7 @@
   - Clean Desktop
   - Clean Downloads
 ```
-## Change Logs
+## Latest Change Logs
 ```yaml
 - Changes:
   - Update Gui
