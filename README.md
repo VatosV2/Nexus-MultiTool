@@ -18,7 +18,7 @@
 
 
 ## Screenshot
-![ss](https://cdn.discordapp.com/attachments/1207062501577990154/1220375540725448724/Bild_2024-03-21_151246767.png?ex=664220ca&is=6640cf4a&hm=ecf3cb86848195c43970511785b4a9657583483fe34b73cd71f61c2f6c03649e&)
+![ss](https://media.discordapp.net/attachments/1207062501577990154/1213239706515542136/20240301_223248.png?ex=6641e046&is=66408ec6&hm=fbb30cb1eb875ef8de2abc16d4ac9f42e7fbbac872c090c63377897cc701ee06&=&format=webp&quality=lossless)
 
 ## Releases
 - 10 Stars for Release ⭐ ✔
