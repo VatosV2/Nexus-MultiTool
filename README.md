@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/VatosV2/Nexus-MultiTool">
-    <img src="https://media.discordapp.net/attachments/1209895707675205653/1209919950689411092/RmDJt7xVhNFTA6yvy3EWfsTbki45EeI67K93h75F_1.png?ex=66294643&is=6616d143&hm=8cce712a285d32b65a312791f34629121b3c8a37fedecf3f64c4372bfe4c004c&" alt="Logo" width="80" height="80">
+    <img src="https://cdn.discordapp.com/attachments/1209895707675205653/1209919950689411092/RmDJt7xVhNFTA6yvy3EWfsTbki45EeI67K93h75F_1.png?ex=6641aa03&is=66405883&hm=d0f94e3a3e121e8a741993005150c9e9b0ebda04b6f5bd4e51da65fd0e84b93a&" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">[Nexus MultiTool] - discord.gg/nexustools</h3>
@@ -18,7 +18,7 @@
 
 
 ## Screenshot
-![ss](https://cdn.discordapp.com/attachments/1207062501577990154/1213239706515542136/20240301_223248.png?ex=662c1f86&is=6619aa86&hm=18f8ccb38b7e058e0c48f9c5e27f8dfc7907dbab06a52989f775523cc0b1ffb9&)
+![ss](https://media.discordapp.net/attachments/1207062501577990154/1220375540725448724/Bild_2024-03-21_151246767.png?ex=664220ca&is=6640cf4a&hm=ecf3cb86848195c43970511785b4a9657583483fe34b73cd71f61c2f6c03649e&=&format=webp&quality=lossless&width=550&height=309)
 
 ## Releases
 - 10 Stars for Release ⭐ ✔
