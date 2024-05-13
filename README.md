@@ -18,7 +18,7 @@
 
 
 ## Screenshot
-![ss](https://media.discordapp.net/attachments/1209895707675205653/1239676336876949636/7E733781-1307-4D17-AAFD-2E4C4692895B.jpg?ex=6643ca0e&is=6642788e&hm=1abdad5a1205191574f94016066992ba3a2c42c50b11981077b3c345dbc9e47b&=&format=webp&width=1246&height=701)
+![ss](https://media.discordapp.net/attachments/1209895707675205653/1239684749921095710/Nexus_Tool.png?ex=6643d1e4&is=66428064&hm=c9e37bce02b7004d271d6610c9bc4ef6f07cdfb0a99caa817dd4b793478b6b4f&)
 
 ## Releases
 - 10 Stars for Release ⭐ ✔
