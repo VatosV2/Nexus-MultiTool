@@ -24,7 +24,8 @@ dirs = [
     'Payment_tokens',
     'Avatars',
     'Token_gen',
-    'Youtube'
+    'Youtube',
+    'ServerIdChecker'
 ]
 
 
