@@ -18,7 +18,7 @@
 <h3 align="center";>  https://nexustools.de/ </h3>
 
 ## Screenshot
-![ss](https://cdn.discordapp.com/attachments/1209895707675205653/1239684749921095710/Nexus_Tool.png?ex=665d8724&is=665c35a4&hm=373bcee8ed50850b6d600a10d5ef35cfb22e1a5e97b592b51022b09baf16131f&)
+![ss](https://repository-images.githubusercontent.com/765915896/684b1822-40f8-4dc3-972c-f706e56e9243)
 
 
 ## Releases
