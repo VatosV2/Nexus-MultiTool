@@ -135,7 +135,7 @@
 ```
 ## Donate
 ```py
-Btc: bc1q2e86tshk0cs05sty5ajlc6n6j8esutj2umcjtz
-Ltc: Lf5vGeL8BwNE84QGyAh1TJWuDxhyKS7QTD
-Eth: 0xa66343933221706294c29935FC8da88b025D501B
+Ltc:
+ltc1qt0eev64v3aq05x7meks443mwugk9269juz0jrt
+
 ```
