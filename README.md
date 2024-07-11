@@ -9,7 +9,7 @@
     Nexus-MultiTool is a Multitool mostly centered around discord Tokens But also has Other Features.
     <br/>
     <br/>
-    <a href="https://discord.gg/nexustools">Discord</a>
+    <a href="https://discord.gg/fSnjxVzM86">Discord</a>
   </p>
 </p>
 <h3 align="center";">Please Star To support this project for free! ⭐</h3>
