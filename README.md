@@ -25,7 +25,7 @@
 - 10 Stars for Release ⭐ ✔
 - 25 Stars for BIG Update (double the functions) ⭐ ✔
 - 40 Stars for V3 ⭐️ ✔
-- 65 Stars for V4 ⭐️ ✔
+- 65 Stars for V4 ⭐️ ✔ - Download From Releases.
 - 128 Stars for V5 ⭐️ ❌ - Working on this as of now.
 
 ## Functions
