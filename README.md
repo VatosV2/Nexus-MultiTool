@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/VatosV2/Nexus-MultiTool">
-    <img src="https://cdn.discordapp.com/attachments/1209895707675205653/1209919950689411092/RmDJt7xVhNFTA6yvy3EWfsTbki45EeI67K93h75F_1.png?ex=6682ec43&is=66819ac3&hm=4809b150641e60e6068a3253a3074aac491f3783021a9e858b7d5bbf4698e101&" alt="Logo" width="80" height="80">
+    <img src="https://nexustools.de/Assets/images/025111e73c9100f75a2f4adfc06161df.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Nexus MultiTool - <a href="https://discord.gg/dS2ZWJrNhZ">https://discord.gg/dS2ZWJrNhZ</a></h3>
