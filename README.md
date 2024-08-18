@@ -3,7 +3,7 @@
     <img src="https://nexustools.de/Assets/images/025111e73c9100f75a2f4adfc06161df.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Nexus MultiTool - <a href="https://discord.gg/nexustools">https://discord.gg/dS2ZWJrNhZ</a></h3>
+  <h3 align="center">Nexus MultiTool - <a href="https://discord.gg/nexustools">https://discord.gg/nexustools</a></h3>
 
   <p align="center">
     Nexus MultiTool is a multi-tool mostly centered around Discord tokens but also has other features.
