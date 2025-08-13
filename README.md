@@ -21,12 +21,6 @@
 ## Screenshot
 ![Screenshot](https://repository-images.githubusercontent.com/765915896/684b1822-40f8-4dc3-972c-f706e56e9243)
 
-## Releases
-- 10 Stars for Release ⭐ ✔
-- 25 Stars for BIG Update (double the functions) ⭐ ✔
-- 40 Stars for V3 ⭐️ ✔
-- 65 Stars for V4 ⭐️ ✔ - Download From Releases.
-- 128 Stars for V5 ⭐️ ❌ - Working on this as of now.
 
 ## Functions
 ```yaml
